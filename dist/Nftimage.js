@@ -17,6 +17,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var Nftimage = function Nftimage(_ref) {
   var fetchimages = _ref.fetchimages,
     item = _ref.item;
+  // const [imageurl, setImageurl] = useState("");
   var _useState = (0, _react.useState)(""),
     _useState2 = _slicedToArray(_useState, 2),
     hash = _useState2[0],

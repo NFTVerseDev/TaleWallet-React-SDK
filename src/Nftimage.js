@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 const Nftimage = ({ fetchimages, item }) => {
+  // const [imageurl, setImageurl] = useState("");
   const [hash, setHash] = useState("");
 
   useEffect(() => {

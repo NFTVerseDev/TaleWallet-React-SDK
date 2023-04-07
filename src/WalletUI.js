@@ -7,7 +7,7 @@ import useAll from "./useAll";
 import { useState } from "react";
 import Nftimage from "./Nftimage";
 
-function WalletUI() {
+function WalletUI({ bgColor, textColor }) {
   const { handleTablClick, defaultOpen, fetchList, balance, images } = useAll();
   const [details, setDetails] = useState([]);
   const [walletBalance, setwalletBalance] = useState("");
@@ -38,9 +38,11 @@ function WalletUI() {
   }
 
   return (
-    <>
+    <div
+      className="wallet-container"
+      style={{ backgroundColor: bgColor, color: textColor }}
+    >
       <div className="flex justify-center items-center">
-        <div className="hidden" id="modal-container"></div>
         <div
           className="flex flex-col items-center gap-20"
           style={{ marginTop: "50px" }}
@@ -65,8 +67,11 @@ function WalletUI() {
             <div className="relative z-10">
               <img src={algorandhexagon} className="w-50" />
             </div>
-            <div id="wallet_balance" className="text-2xl font-bold text-tale">
-              {walletBalance.balance}
+            <div id="wallet_balance" className=" font-bold text-tale">
+              <h3>{walletBalance.balance} Algos ⟳</h3>
+            </div>
+            <div>
+              <p>Min Balance: 0.1 Algos </p>
             </div>
           </div>
           <div className="flex gap-20 justify-center">
@@ -80,29 +85,50 @@ function WalletUI() {
         </div>
       </div>
       {/* tab start here  */}
-      <div className="tab-container">
-        <div className="tab" style={{}}>
+      <div
+        className="tab-container"
+        style={{
+          backgroundColor: bgColor,
+          color: textColor,
+          paddingTop: "2%",
+        }}
+      >
+        <div className="tab">
           <button
             className="tablinks font-bold"
             onClick={(e) => handleTablClick(e, "NFTs")}
             id="defaultOpen"
+            style={{
+              backgroundColor: bgColor,
+              color: textColor,
+              padding: "2%",
+            }}
           >
             NFTs
           </button>
           <button
             className="tablinks font-bold"
             onClick={(e) => handleTablClick(e, "Tokens")}
+            style={{
+              backgroundColor: bgColor,
+              color: textColor,
+              padding: "2%",
+            }}
           >
             Tokens
           </button>
           <button
             className="tablinks font-bold"
             onClick={(e) => handleTablClick(e, "Activity")}
+            style={{
+              backgroundColor: bgColor,
+              color: textColor,
+              padding: "2%",
+            }}
           >
             Activity
           </button>
         </div>
-
         <div className="w-80 mx-auto">
           <div id="NFTs" className="tabcontent ">
             <div className="nfttab">
@@ -130,7 +156,7 @@ function WalletUI() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

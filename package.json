@@ -1,6 +1,6 @@
 {
-  "name": "tale-wallet-plugin",
-  "version": "1.0.4",
+  "name": "@nftverse/tale-wallet-plugin",
+  "version": "2.0.0",
   "description": "This plugin can be used to integrate the tale wallet components into your own react application.",
   "main": "dist/index.js",
   "scripts": {

@@ -156,12 +156,15 @@ const useAll = () => {
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(tabName).style.display = "block";
+    document.getElementById(tabName).style.display = "contents";
     event.currentTarget.className += " active";
   }
   function defaultOpen() {
     // default open tab
-    document.getElementById("defaultOpen").click();
+    const defaultOpenTab = document.getElementById("defaultOpen").click();
+    if (defaultOpenTab) {
+      defaultOpenTab.click();
+    }
   }
 
   //fetch list of asset

@@ -24,7 +24,9 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-function WalletUI() {
+function WalletUI(_ref) {
+  var bgColor = _ref.bgColor,
+    textColor = _ref.textColor;
   var _useAll = (0, _useAll2["default"])(),
     handleTablClick = _useAll.handleTablClick,
     defaultOpen = _useAll.defaultOpen,
@@ -100,12 +102,15 @@ function WalletUI() {
     var result = images(hash);
     return result;
   }
-  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
+    className: "wallet-container",
+    style: {
+      backgroundColor: bgColor,
+      color: textColor
+    }
+  }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex justify-center items-center"
   }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "hidden",
-    id: "modal-container"
-  }), /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex flex-col items-center gap-20",
     style: {
       marginTop: "50px"
@@ -137,8 +142,8 @@ function WalletUI() {
     className: "w-50"
   })), /*#__PURE__*/_react["default"].createElement("div", {
     id: "wallet_balance",
-    className: "text-2xl font-bold text-tale"
-  }, walletBalance.balance)), /*#__PURE__*/_react["default"].createElement("div", {
+    className: " font-bold text-tale"
+  }, /*#__PURE__*/_react["default"].createElement("h3", null, walletBalance.balance, " Algos \u27F3")), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("p", null, "Min Balance: 0.1 Algos "))), /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex gap-20 justify-center"
   }, /*#__PURE__*/_react["default"].createElement("button", {
     className: "btn primary-btn",
@@ -147,25 +152,44 @@ function WalletUI() {
     className: "btn secondary-btn",
     id: "sell-btn"
   }, "Send")))), /*#__PURE__*/_react["default"].createElement("div", {
-    className: "tab-container"
+    className: "tab-container",
+    style: {
+      backgroundColor: bgColor,
+      color: textColor,
+      paddingTop: "2%"
+    }
   }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "tab",
-    style: {}
+    className: "tab"
   }, /*#__PURE__*/_react["default"].createElement("button", {
     className: "tablinks font-bold",
     onClick: function onClick(e) {
       return handleTablClick(e, "NFTs");
     },
-    id: "defaultOpen"
+    id: "defaultOpen",
+    style: {
+      backgroundColor: bgColor,
+      color: textColor,
+      padding: "2%"
+    }
   }, "NFTs"), /*#__PURE__*/_react["default"].createElement("button", {
     className: "tablinks font-bold",
     onClick: function onClick(e) {
       return handleTablClick(e, "Tokens");
+    },
+    style: {
+      backgroundColor: bgColor,
+      color: textColor,
+      padding: "2%"
     }
   }, "Tokens"), /*#__PURE__*/_react["default"].createElement("button", {
     className: "tablinks font-bold",
     onClick: function onClick(e) {
       return handleTablClick(e, "Activity");
+    },
+    style: {
+      backgroundColor: bgColor,
+      color: textColor,
+      padding: "2%"
     }
   }, "Activity")), /*#__PURE__*/_react["default"].createElement("div", {
     className: "w-80 mx-auto"

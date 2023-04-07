@@ -529,19 +529,7 @@ ol {
   height: 15px;
   object-fit: contain;
 }
-/* .btn{
-    border: none;
-    display: inline-block;
-    padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    background-color: inherit;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
-} */
+
 .button1 {
   color: #ffffff;
   background-color: #f0ad4e;
@@ -607,24 +595,18 @@ ol {
 
 /* //////////////////////////// */
 
-/* Style the tab */
-.tab-container {
-  /* background-color: #f1f1f2 !important; */
-}
-.tab {
-
-  width: 80%;
-  margin: auto;
-  margin-top: 50px !important;
-  display: flex;
-}
-.tablinks {
-  /* background-color: #f1f1f2 !important; */
-}
-
 /* Style the buttons inside the tab */
+
+.tab {
+  display: flex;
+  justify-content: space-between;
+}
 .tab button {
+  flex-basis: calc(33.33%);
   border-bottom: 4px solid rgb(229, 231, 235);
+  border-left: none;
+  border-right: none;
+  border-top: none;
   cursor: pointer;
   transition: 0.3s;
   font-size: 17px;
@@ -636,7 +618,6 @@ ol {
 }
 
 .nfttab {
-  width: 80vw !important;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -656,6 +637,6 @@ ol {
 .mx-auto {
   margin: auto;
 }
-* {
+/* * {
   background-color: white;
-}
+} */
