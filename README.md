@@ -29,7 +29,7 @@ $ npm i @nftverse/tale-wallet-plugin
 ### Import package on your project
 
 ```sh
-$ import all from "@nftverse/tale-wallet-plugin";
+$ import "@nftverse/tale-wallet-plugin";
 ```
 
 ### this all will return 5 components which are
