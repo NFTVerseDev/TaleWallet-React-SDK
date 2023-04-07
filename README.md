@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/angular2-expandable-list.svg)](https://www.npmjs.com/package/tale-wallet-plugin)
+[![npm version](https://badge.fury.io/js/angular2-expandable-list.svg)](https://www.npmjs.com/package/@nftverse/tale-wallet-plugin)
 
 # @nftverse/tale-wallet-plugin
 
@@ -67,7 +67,7 @@ import WalletUI from "@nftverse/tale-wallet-plugin/dist/WalletUI";
 #### To use WalletUI on your project use
 
 ```sh
-<WalletUI />
+<WalletUI bgColor={"white"} textColor={"black"} />
 ```
 
 ### useAll
@@ -84,7 +84,19 @@ import useAll from "@nftverse/tale-wallet-plugin/dist/useAll";
 const { handleTablClick, defaultOpen, fetchList, balance, images } = useAll();
 ```
 
-##### Now you can use those function in your project
+### Overlay
+
+#### Overlay is a modal which open when user click on a button.
+
+```sh
+import Overlay from "@nftverse/tale-wallet-plugin/dist/Overlay/Overlay";
+```
+#### To use overlay on your project use
+
+```sh
+<Overlay bgColor={"orange"} textColor={"black"} width={"700px"} height={"400px"} />
+```
+
 
 ## Authors
 
